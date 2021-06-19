@@ -27,7 +27,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ### Links
 
-- Solution URL: https://github.com/Eelyneee/sunnyside-agency-landing-page/settings/pages
+- Solution URL: https://github.com/Eelyneee/sunnyside-agency-landing-page
 - Live Site URL: https://eelyneee.github.io/sunnyside-agency-landing-page/
 
 ## My process
