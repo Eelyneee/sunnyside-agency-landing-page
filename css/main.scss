@@ -237,6 +237,12 @@ footer {
     padding: 0% 2%;
     color: $dark-blue;
   }
+  a:hover {
+    color: $white;
+  }
+  a:hover img {
+    color: $white;
+  }
 }
 .attribution {
   font-size: 11px;
