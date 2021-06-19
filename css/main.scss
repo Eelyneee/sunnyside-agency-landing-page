@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+//primary
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark-desaturated-cyan: hsl(167, 40%, 24%);
+$dark-blue: hsl(198, 62%, 26%);
+$dark-moderate_cyan: hsl(168, 34%, 41%);
+
+//neutral
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+///font
+$myfontsize: 18px;
+@mixin Barlow {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+@mixin Fraunces-1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+@mixin Fraunces-2 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+//addtional
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#one {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  nav {
+    @include flex-row();
+    justify-content: space-around;
+    align-content: center;
+    padding: 1% 0% 2%;
+
+    .nav-content {
+      @include flex-row();
+      justify-content: space-evenly;
+      width: 30%;
+      align-content: center;
+
+      a {
+        text-decoration: none;
+        @include Barlow();
+        font-size: $myfontsize;
+        color: $white;
+        cursor: pointer;
+        padding: 10px 20px;
+        vertical-align: center;
+      }
+      a:hover {
+        background-color: rgba($color: #f5fdffbb, $alpha: 0.2);
+        border-radius: 20px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  h1 {
+    @include Fraunces-2();
+    color: $white;
+    font-size: 5rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20%;
+    left: 24%;
+  }
+  .arrow {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+  }
+}
+
+#two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  .txtbox {
+    width: 50%;
+    h2 {
+      @include Fraunces-1();
+      font-size: 2.5rem;
+      color: $very-dark-desaturated-blue;
+    }
+    p {
+      color: $very-dark-grayish-blue;
+      padding: 7% 0%;
+    }
+    a {
+      @include Fraunces-1();
+      font-size: 17px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $very-dark-desaturated-blue;
+    }
+    .a1 {
+      border-bottom: 7px solid hsla(51, 100%, 49%, 0.521);
+    }
+    .a2 {
+      border-bottom: 7px solid hsla(7, 99%, 70%, 0.521);
+    }
+    .a1:hover {
+      border-bottom: 7px solid $yellow;
+    }
+    .a2:hover {
+      border-bottom: 7px solid $soft-red;
+    }
+  }
+  .img {
+    align-self: stretch;
+    justify-self: stretch;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    h3 {
+      position: absolute;
+      bottom: 30%;
+      left: 40%;
+      @include Fraunces-2();
+      font-size: 1.5rem;
+      color: $very-dark-grayish-blue;
+    }
+    p {
+      position: absolute;
+      top: 75%;
+      left: 35%;
+      text-align: center;
+      width: 35ch;
+      font-size: $myfontsize;
+      line-height: 32px;
+      @include Barlow();
+      color: $dark-grayish-blue;
+    }
+  }
+}
+
+#three {
+  padding: 7% 15%;
+  text-align: center;
+  h4 {
+    @include Fraunces-1();
+    font-size: 24px;
+    color: $grayish-blue;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding: 2% 0%;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  img {
+    border-radius: 100px;
+    width: 60px;
+    margin: 60px 0px;
+  }
+  .card {
+    padding: 0% 3%;
+    p:nth-of-type(1) {
+      @include Barlow();
+      font-size: 15px;
+      color: $dark-grayish-blue;
+      line-height: 25px;
+    }
+    p:nth-of-type(2) {
+      @include Fraunces-1();
+      font-size: 15px;
+      color: $very-dark-desaturated-blue;
+      padding: 60px 0% 5px;
+    }
+    p:nth-of-type(3) {
+      @include Barlow();
+      font-size: 13px;
+      color: $grayish-blue;
+    }
+  }
+}
+#four {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 100%;
+  img {
+    width: 400px;
+    height: 400px;
+    align-items: stretch;
+    justify-items: stretch;
+  }
+}
+footer {
+  padding: 7% 15%;
+  text-align: center;
+  background-color: hsla(162, 32%, 43%, 0.507);
+  .footer-nav a {
+    display: inline-block;
+    text-decoration: none;
+    @include Barlow();
+    padding: 5% 3%;
+    color: $dark-moderate_cyan;
+    font-size: $myfontsize;
+  }
+  .contact a {
+    display: inline-block;
+    padding: 0% 2%;
+    color: $dark-blue;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: hsla(162, 32%, 43%, 0.507);
+}
+.attribution a {
+  color: hsl(61, 93%, 54%);
+  font-weight: bold;
+}

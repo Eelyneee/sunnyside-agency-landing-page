@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#one {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+#one .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+#one nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  padding: 1% 0% 2%;
+}
+#one nav .nav-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 30%;
+  align-content: center;
+}
+#one nav .nav-content a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  vertical-align: center;
+}
+#one nav .nav-content a:hover {
+  background-color: rgba(245, 253, 255, 0.2);
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+#one h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: white;
+  font-size: 5rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20%;
+  left: 24%;
+}
+#one .arrow {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+}
+
+#two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+#two .txtbox {
+  width: 50%;
+}
+#two .txtbox h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #23303e;
+}
+#two .txtbox p {
+  color: #5a636c;
+  padding: 7% 0%;
+}
+#two .txtbox a {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #23303e;
+}
+#two .txtbox .a1 {
+  border-bottom: 7px solid rgba(250, 212, 0, 0.521);
+}
+#two .txtbox .a2 {
+  border-bottom: 7px solid rgba(254, 120, 103, 0.521);
+}
+#two .txtbox .a1:hover {
+  border-bottom: 7px solid #fad400;
+}
+#two .txtbox .a2:hover {
+  border-bottom: 7px solid #fe7867;
+}
+#two .img {
+  align-self: stretch;
+  justify-self: stretch;
+  position: relative;
+}
+#two .img img {
+  width: 100%;
+  height: 100%;
+}
+#two .img h3 {
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #5a636c;
+}
+#two .img p {
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  text-align: center;
+  width: 35ch;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: #818498;
+}
+
+#three {
+  padding: 7% 15%;
+  text-align: center;
+}
+#three h4 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #a7abae;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  padding: 2% 0%;
+}
+#three .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+#three img {
+  border-radius: 100px;
+  width: 60px;
+  margin: 60px 0px;
+}
+#three .card {
+  padding: 0% 3%;
+}
+#three .card p:nth-of-type(1) {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #818498;
+  line-height: 25px;
+}
+#three .card p:nth-of-type(2) {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #23303e;
+  padding: 60px 0% 5px;
+}
+#three .card p:nth-of-type(3) {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #a7abae;
+}
+
+#four {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 100%;
+}
+#four img {
+  width: 400px;
+  height: 400px;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+footer {
+  padding: 7% 15%;
+  text-align: center;
+  background-color: rgba(75, 145, 124, 0.507);
+}
+footer .footer-nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  padding: 5% 3%;
+  color: #458c7e;
+  font-size: 18px;
+}
+footer .contact a {
+  display: inline-block;
+  padding: 0% 2%;
+  color: #19536b;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: rgba(75, 145, 124, 0.507);
+}
+
+.attribution a {
+  color: #f3f71d;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
