@@ -177,8 +177,7 @@ $myfontsize: 18px;
   }
 
   .card-container {
-    display: flex;
-    flex-direction: row;
+    @include flex-row();
     justify-content: center;
     align-content: center;
   }
