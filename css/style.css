@@ -52,6 +52,16 @@ section {
   border-radius: 20px;
   text-transform: uppercase;
 }
+#one .burger {
+  display: none;
+}
+#one .burger div {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 10px;
+}
 #one h1 {
   font-family: "Fraunces", serif;
   font-weight: 900;
@@ -236,33 +246,61 @@ footer a:hover img {
   font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   #one {
     height: 380px;
   }
   #one .logo img {
-    width: 70%;
+    width: 80%;
     padding-left: 15%;
   }
   #one .bg {
     height: 380px;
   }
   #one nav {
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 15px 0px;
   }
   #one nav .nav-content {
-    display: none;
+    z-index: 2;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    left: 10%;
+    margin: 16% 0%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+  #one nav .nav-content a {
+    color: #818498;
+    font-size: 13px;
+    margin: 20px 100px;
+    border-radius: 50px;
+  }
+  #one nav .nav-content a:hover {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: #fad400;
+  }
+  #one nav .nav-active {
+    transform: translateX(0%);
+  }
+  #one .burger {
+    display: block;
+    cursor: pointer;
   }
   #one h1 {
-    top: 15%;
-    left: 18%;
+    top: 30%;
+    left: 20%;
     font-size: 1.5rem;
     text-align: center;
   }
   #one .arrow {
     position: absolute;
-    top: 25%;
+    top: 45%;
     left: 50%;
     width: 30px;
     height: 80px;

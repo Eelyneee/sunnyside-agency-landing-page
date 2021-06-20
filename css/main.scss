@@ -85,6 +85,16 @@ section {
       }
     }
   }
+  .burger {
+    display: none;
+  }
+  .burger div {
+    width: 25px;
+    height: 4px;
+    background-color: $white;
+    margin: 5px;
+    border-radius: 10px;
+  }
   h1 {
     @include Fraunces-2();
     color: $white;
@@ -257,12 +267,12 @@ footer {
   font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   #one {
     height: 380px;
     .logo {
       img {
-        width: 70%;
+        width: 80%;
         padding-left: 15%;
       }
     }
@@ -270,21 +280,50 @@ footer {
       height: 380px;
     }
     nav {
-      justify-content: flex-start;
+      justify-content: space-between;
       padding: 15px 0px;
       .nav-content {
-        display: none;
+        z-index: 2;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        left: 10%;
+        margin: 16% 0%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+        a {
+          color: $dark-grayish-blue;
+          font-size: 13px;
+          margin: 20px 100px;
+          border-radius: 50px;
+        }
+        a:hover {
+          @include Fraunces-1;
+          font-size: 12px;
+          background-color: $yellow;
+        }
+      }
+      .nav-active {
+        transform: translateX(0%);
       }
     }
+
+    .burger {
+      display: block;
+      cursor: pointer;
+    }
+
     h1 {
-      top: 15%;
-      left: 18%;
+      top: 30%;
+      left: 20%;
       font-size: 1.5rem;
       text-align: center;
     }
     .arrow {
       position: absolute;
-      top: 25%;
+      top: 45%;
       left: 50%;
       width: 30px;
       height: 80px;
