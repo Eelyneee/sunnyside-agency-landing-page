@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+section {
+  overflow-x: hidden;
+}
+
 #one {
   position: relative;
   height: 100vh;
@@ -230,6 +234,96 @@ footer a:hover img {
 .attribution a {
   color: #f3f71d;
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  #one {
+    height: 380px;
+  }
+  #one .logo img {
+    width: 70%;
+  }
+  #one .bg {
+    height: 380px;
+  }
+  #one nav {
+    justify-content: flex-start;
+    padding: 15px 0px;
+  }
+  #one nav .nav-content {
+    display: none;
+  }
+  #one h1 {
+    top: 15%;
+    left: 18%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #one .arrow {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 30px;
+    height: 80px;
+  }
+
+  #two {
+    grid-template-columns: 1fr;
+  }
+  #two .txtbox {
+    padding: 30px 0px;
+    text-align: center;
+  }
+  #two .txtbox .egg {
+    grid-row-start: 1;
+  }
+  #two .txtbox h2 {
+    font-size: 20px;
+  }
+  #two .txtbox p {
+    font-size: 13px;
+  }
+  #two .txtbox a {
+    font-size: 12px;
+  }
+  #two .img h3 {
+    position: absolute;
+    bottom: 32%;
+    left: 30%;
+    font-size: 18px;
+  }
+  #two .img p {
+    top: 70%;
+    left: 22%;
+    text-align: center;
+    width: 35ch;
+    font-size: 11px;
+    line-height: 15px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #818498;
+  }
+
+  #three .card-container {
+    flex-direction: column;
+  }
+  #three img {
+    margin: 30px 0px;
+  }
+  #three .card p:nth-of-type(2) {
+    padding: 30px 0% 0px;
+  }
+  #three .card p:nth-of-type(3) {
+    padding-bottom: 30px;
+  }
+
+  #four {
+    grid-template-columns: 1fr 1fr;
+  }
+  #four img {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
